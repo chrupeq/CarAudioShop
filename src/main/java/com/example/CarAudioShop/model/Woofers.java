@@ -1,5 +1,7 @@
 package com.example.CarAudioShop.model;
 
+import java.util.Calendar;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,7 +20,7 @@ public class Woofers {
 
 	private int Company_ID;
 
-	private java.sql.Date Date;
+	private Calendar Date;
 
 	private String Comment;
 
@@ -76,6 +78,7 @@ public class Woofers {
 
 	private double SPL1;
 	private double SPL2;
+	
 	public String getModel() {
 		return Model;
 	}
@@ -88,10 +91,10 @@ public class Woofers {
 	public void setCompany_ID(int company_ID) {
 		Company_ID = company_ID;
 	}
-	public java.sql.Date getDate() {
+	public Calendar getDate() {
 		return Date;
 	}
-	public void setDate(java.sql.Date date) {
+	public void setDate(Calendar date) {
 		Date = date;
 	}
 	public String getComment() {

@@ -27,16 +27,10 @@ public class WoofersWS {
 	@EJB
 	private WoofersDAO woofersDao;
 	
-	public int getValue(){
-		return 2;
-	}
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
 	public Response findAllWoofers() {
-		System.out.println("Get all woofers++test");
 		List<Woofers> woofers=woofersDao.getAllWoofers();
-		System.out.println("got Woofers");
-		System.out.println(woofers.size());
 		return Response.status(200).entity(woofers).build();
 	}
 	
@@ -45,6 +39,9 @@ public class WoofersWS {
 	@Path("/{id}")
 	public Response findWooferById(@PathParam("id") int id) {
 		Woofers woofer = woofersDao.getWoofer(id);
+		if(woofer==null){
+			return Response.status(404).build();
+		}
 		return Response.status(200).entity(woofer).build();
 
 	}
@@ -60,8 +57,9 @@ public class WoofersWS {
 	@Path("/{id}")
 	@Consumes("application/json")
 	@Produces({ MediaType.APPLICATION_JSON })
-	public Response updateWoofer(Woofers woofer) {
+	public Response updateWoofer(Woofers woofer,@PathParam("id") int id) {
 		woofersDao.update(woofer);
+		woofersDao.delete(id);
 		return Response.status(200).entity(woofer).build();
 	}
 
