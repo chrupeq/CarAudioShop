@@ -12,7 +12,7 @@ public class Woofers {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int ID;
 
 	private String Model;
 
@@ -269,9 +269,11 @@ public class Woofers {
 		SPL2 = sPL2;
 	}
 	public int getId() {
-		return id;
+		return ID;
 	}
-	
+	public void setId(int id){
+		ID = id;
+	}
 	
 
 }

@@ -2,6 +2,180 @@
 
 <html>
 <head>
-<meta http-equiv="Refresh" content="0; URL=index.jsf">
+<meta charset="utf-8">
+<title>Subwoofers Database</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<link href="css/wooferTable.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 </head>
+<body>
+
+	<div class="container">
+		<div class="masthead">
+			<div class="header">
+				<img src="images/logo.png" alt="logo" class="logo">
+				<h2 class="logotext">"For all bass lovers!"</h2>
+				<p>Welcome to sound world! Everything what you need!</p>
+			</div>
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="container">
+						<ul class="nav">
+							<li id="home" class="active"><a href="#">Home</a></li>
+							<li id="woofers"><a href="#">Woofers</a></li>
+							<!--<li><a href="#">Companies</a></li>-->
+							<li id="about"><a href="#">About</a></li>
+							<li id="contact"><a href="#">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- /.navbar -->
+		</div>
+
+		<!-- Jumbotron -->
+		<div class="jumbotron">
+
+			<h1>Official Subwoofer Database!</h1>
+			<p class="lead">Welcome to official speakers database where you
+				can find or add informations and parameters specification of woofers
+				available on the market!</p>
+			<a class="btn btn-large btn-success" href="#">Hava look what we
+				have</a>
+		</div>
+
+
+		<section id="dataTable">
+			<div class="woofersTable">
+				<table id="woofersTable" class="display">
+					<thead>
+						<tr>
+							<th>Model</th>
+							<th>Piston Description</th>
+							<th>Suspension Description</th>
+							<th>RMS Wats</th>
+							<th>Magnet Description</th>
+							<th>Production Date</th>
+							<th></th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</section>
+		<!--MODAL-->
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Header</h4>
+					</div>
+					<div class="modal-body">
+						<p id=piston_Desc></p>
+						<p id=susp_Desc></p>
+						<p id=dust_Cap_Desc></p>
+						<p id=frame_Desc></p>
+						<p id=vc_Desc></p>
+						<p id=mag_Desc></p>
+						<p id=dualMG></p>
+						<p id=fs></p>
+						<p id=qms></p>
+						<p id=vas></p>
+						<p id=cms></p>
+						<p id=mms></p>
+						<p id=rms></p>
+						<p id=xlin></p>
+						<p id=sd></p>
+						<p id=qes></p>
+						<p id=re></p>
+						<p id=le></p>
+						<p id=z></p>
+						<p id=bl></p>
+						<p id=pe></p>
+						<p id=qts></p>
+						<p id=spl1></p>
+						<p id=spl2></p>
+						<p id=date></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="aboutWeb">
+		 <p>We want to welcome you to our WebSite with contain at the moment around 10,000 speakers parameters
+		  specification which is required to proceed with box design for this/these speakers.
+		  <br> You can add new speakers entries with parameters. Please remember that this service is free
+		  and DO NOT add dummy data as it may help others with their design.
+		  <br>
+		  If you have any question or suggestion about WebSite or spears Data fell free to contact us. 
+		  The contact details can be found in contact section.
+		  <br><br>
+		  </p>
+		  <h2>Chrupeq</h2>
+		</div>
+		
+		<div class="contactWeb">
+			<h2>Email: <br>
+			<a href="mailto:bassLovers@gmail.com?Subject=BassLovers" target="_top">bassLovers@gmail.com</a>
+			</h2>
+		</div>
+		
+		<hr>
+		<div class="row-fluid">
+			<div class="span4">
+				<h2>Our Designs</h2>
+				<p>You can find previous designs in here with pictures and diagrams.</p>
+				<p>
+					<a class="btn" href="#">Designs »</a>
+				</p>
+			</div>
+			<div class="span4">
+				<h2>Forum</h2>
+				<p>You can share your designs and problems with other audio-fills in forum.</p>
+				<p>
+					<a class="btn" href="#">Forum »</a>
+				</p>
+			</div>
+			<div class="span4">
+				<h2>Box Designs</h2>
+				<p>You can find or add box designs for existing speakers in database.</p>
+				<p>
+					<a class="btn" href="#">View details »</a>
+				</p>
+			</div>
+		</div>
+
+		<hr>
+
+		<div class="footer">
+			<p>© Chrupeq 2016</p>
+		</div>
+
+	</div>
+	<!-- /container -->
+
+	<!-- Le javascript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/bootstrap.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js" type="text/javascript"></script>
+	<script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
+	<script src="js/dataTables.responsive.min.js" type="text/javascript"></script>
+	<script src="js/responsive.bootstrap.min.js" type="text/javascript"></script>
+
+</body>
+</body>
 </html>

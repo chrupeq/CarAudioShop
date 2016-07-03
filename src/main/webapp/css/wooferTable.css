@@ -1,0 +1,17 @@
+#woofersTable_length {
+    float: right;
+}
+#woofersTable_filter {
+    float: left;
+}
+.paginate_button {
+    padding-right: 5px;
+}
+#woofersTable_wrapper td {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    text-align: center;
+}
+#woofersTable {
+    width: 100%;
+}

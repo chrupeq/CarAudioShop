@@ -22,10 +22,10 @@ public class WoofersDAO {
         return query.getResultList();
     }
 	
-	public List<Woofers> getWoofersByModel(String model) {
+	public List<Woofers> getWoofersByModel(String Model) {
     	Query query=em.createQuery("SELECT w FROM Woofers AS w "+
-    								"WHERE w.model LIKE ?1");
-    	query.setParameter(1, "%"+model.toUpperCase()+"%");
+    								"WHERE w.Model LIKE ?1");
+    	query.setParameter(1, "%"+Model.toUpperCase()+"%");
         return query.getResultList();
     }
 	
