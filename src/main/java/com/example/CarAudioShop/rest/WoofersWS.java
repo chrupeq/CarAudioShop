@@ -66,7 +66,12 @@ public class WoofersWS {
 	@DELETE
 	@Path("/{id}")
 	public Response deleteWoofer(@PathParam("id") int id) {
+		try{
 		woofersDao.delete(id);
+		}catch(Exception e){
+			e.printStackTrace();
+			return Response.status(404).build();
+		}
 		return Response.status(204).build();
 	}
 	
